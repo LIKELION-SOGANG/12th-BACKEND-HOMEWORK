@@ -20,14 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-p2#)!o5vlo6mhqzw#)i+n3&&lrhx8yart=r!dyvtir#2aogkg='
+SECRET_KEY = 'django-insecure-0uh!q-@2%)awx=-109ks6n4ow!us&n+cjlj&c8_v*to^o8re8c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
-CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -40,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'siteService.apps.SiteserviceConfig',
-    'corsheaders',
+    'shop',
 ]
 
 MIDDLEWARE = [
@@ -52,8 +49,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -85,8 +80,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-
-
 }
 
 
