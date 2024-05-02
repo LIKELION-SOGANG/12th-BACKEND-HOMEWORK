@@ -26,11 +26,11 @@ def post_list(request):
         post = Post()
         post.title = request.POST['title']
         post.content = request.POST['content']
-        user_id = request.POST['user_id']
+        user_name = request.POST['user_id']
 
         try:
-            user = User.objects.get(name=user_id)
-            post.user = user
+            user = User.objects.get(name=user_name)
+            post.user_id = user
         except User.DoesNotExist:
             raise Http404('User does not exist')
         post.save()
