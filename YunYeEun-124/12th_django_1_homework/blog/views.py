@@ -15,8 +15,7 @@ def post_list(request):
                     'title':post.title,
                     'content':post.content,
                     'user_id':post.user_id.name
-                    #질문하기 user_id 가 fk일때 받아오는 방법
-                    #우선 title로 대체 추후 수정 
+                    
                     
                 }
             )
