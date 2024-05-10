@@ -1,3 +1,7 @@
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path,include
+
 """
 URL configuration for config project.
 
@@ -19,4 +23,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Blog/', include('Blog.urls'))
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
